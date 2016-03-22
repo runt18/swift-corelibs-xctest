@@ -88,7 +88,7 @@ def main():
     swift_build_dir = os.path.abspath(args.swift_build_dir)
 
     if not os.path.exists(build_dir):
-        run("mkdir -p {}".format(build_dir))
+        run("mkdir -p {0}".format(build_dir))
 
     sourceFiles = [
                    "XCTAssert.swift",
@@ -118,10 +118,10 @@ def main():
     if args.module_path is not None and args.lib_path is not None:
         module_path = os.path.abspath(args.module_path)
         lib_path = os.path.abspath(args.lib_path)
-        run("mkdir -p {}".format(module_path))
-        run("mkdir -p {}".format(lib_path))
+        run("mkdir -p {0}".format(module_path))
+        run("mkdir -p {0}".format(lib_path))
 
-        note("Performing installation into {} and {}".format(module_path, lib_path))
+        note("Performing installation into {0} and {1}".format(module_path, lib_path))
 
         install_lib = "libXCTest.so"
         install_mod_doc = "XCTest.swiftdoc"
